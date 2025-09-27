@@ -5,8 +5,13 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
+
+  // For Vercel deployment, use empty base
+  // For GitHub Pages, use repo name
+  const base = env.VITE_REPO_NAME ? `/${env.VITE_REPO_NAME}/` : "/";
+
   return {
-    base: `/${env.VITE_REPO_NAME}/`,
+    base: base,
     plugins: [react(), tailwindcss()],
     server: {
       open: true,
