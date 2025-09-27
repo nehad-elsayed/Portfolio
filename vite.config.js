@@ -13,6 +13,20 @@ export default defineConfig(({ mode }) => {
   return {
     base: base,
     plugins: [react(), tailwindcss()],
+    build: {
+      outDir: "dist",
+      assetsDir: "assets",
+      sourcemap: false,
+      minify: "terser",
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ["react", "react-dom"],
+            router: ["react-router-dom"],
+          },
+        },
+      },
+    },
     server: {
       open: true,
       host: false, // Allow access from network devices
