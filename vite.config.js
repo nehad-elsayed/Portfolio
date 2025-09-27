@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => {
       outDir: "dist",
       assetsDir: "assets",
       sourcemap: false,
-      minify: "terser",
+      minify: "esbuild",
       rollupOptions: {
         output: {
           manualChunks: {
@@ -29,7 +29,7 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       open: true,
-      host: false, // Allow access from network devices
+      host: false,
       proxy: {
         "/api": {
           target: "http://localhost:5000",
