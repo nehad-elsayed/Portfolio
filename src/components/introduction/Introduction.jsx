@@ -38,7 +38,7 @@ const Introduction = () => {
             </span>
           </p>
           <p className="text-xs xxs:text-lg lg:text-[18px] my-6">
-            <span className="bg-highlight">
+            <span className="bg-highlight text-nowrap">
               Performance Marketer & Media Buyer
             </span>{" "}
             with over 1.5 year of consistent experience (and earlier hands-on
