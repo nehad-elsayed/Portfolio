@@ -33,19 +33,19 @@ const Profile = () => {
           <h2
             className={`text-2xl xxs:text-3xl sm:text-4xl lg:text-[38px] text-[min(24px,38px)] max-md:text-center font-semibold mb-8`}
           >
-            I am Professional User Experience Designer
+            I am Professional Performance Marketer & Media Buyer
           </h2>
           <div
             className={`text-xs xs:text-[16px] lg:text-lg font-normal max-md:text-center text-gray-600`}
           >
             <p className={``}>
-              I design and develop services for customers specializing creating
-              stylish, modern websites, web services and online stores. My
-              passion is to design digital user experiences.
-            </p>
-            <p className="mt-3">
-              I design and develop services for customers specializing creating
-              stylish, modern websites, web services.
+             I plan,
+              execute, and optimize campaigns for businesses, specializing in
+              creating data-driven strategies that drive measurable growth and
+              ROI. My passion is helping brands scale through smart advertising
+              and precision targeting. I focus on delivering high-performing
+              campaigns across digital platforms, ensuring every ad spend
+              generates maximum impact.
             </p>
           </div>
           <div className="mt-8 flex max-md:justify-center">
@@ -57,7 +57,7 @@ const Profile = () => {
             </a>
             <a
               className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary  ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
-              href="#!"
+              href="https://drive.google.com/file/d/1yH1kG_6ItCz1pNNaYspZMpexn-bA6dVM/view?usp=drive_link"
             >
               <FontAwesomeIcon icon={faDownload} /> Download CV
             </a>

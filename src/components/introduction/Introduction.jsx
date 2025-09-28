@@ -7,7 +7,7 @@ const informationSummaryData = [
   {
     id: 1,
     title: "Experience",
-    description: "1 Y.",
+    description: "1.5 Y.",
   },
   {
     id: 2,
@@ -36,10 +36,8 @@ const Introduction = () => {
             </span>
           </p>
           <p className="text-xs xxs:text-lg lg:text-[18px] my-6">
-            I'm a Freelance <span className="bg-highlight">UI/UX Designer</span>{" "}
-            and <span className="bg-highlight"> Developer</span> based in
-            London, England. I strives to build immersive and beautiful web
-            applications through carefully crafted code and user-centric design.
+          <span className="bg-highlight">Performance Marketer & Media Buyer</span> with over 1.5 year of consistent experience (and earlier hands-on work since 2016), combining both freelance and in-agency experience. Specialized in running high-converting paid campaigns across Meta, TikTok, Snapchat, Google, and X for the Egyptian and Gulf markets. Proficient in tracking setup (GTM, GA4, Meta social media pixels, Google tracking), Conversion Rate Optimization (CRO), and full-funnel strategy planning. Worked on diverse verticals including online courses, food & beverage, financial services, healthcare, automotive, fashion, real estate, Bus rental, and dental clinics – achieving measurable performance results and business growth.    
+          
           </p>
           <p className="text-center lg:text-start">
             <a

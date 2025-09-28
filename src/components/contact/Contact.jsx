@@ -11,17 +11,17 @@ const addressData = [
   {
     icon: faLocationDot,
     title: "Address",
-    description: "New Mexico, 31134",
+    description: "Mansoura, 35511",
   },
   {
     icon: faEnvelope,
     title: "My Email",
-    description: "mymail@mail.com",
+    description: "Abdelrahmanelsied7@gmail.com",
   },
   {
     icon: faPhone,
     title: "Call Me Now",
-    description: "00-123 00000",
+    description: "002 01028222116",
   },
 ];
 
