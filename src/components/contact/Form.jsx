@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
-
+import * as Yup from "yup";
 
 const commonClass =
   "input input-lg border-0 border-b-2 focus:outline-none focus:placeholder:text-picto-primary placeholder:text-[15px] md:placeholder:text-lg focus:border-picto-primary border-[#E6E8EB] w-full rounded-none px-0";
@@ -15,22 +15,34 @@ const Form = () => {
     subject: "",
     message: "",
   };
+
+  const validationSchema = Yup.object({
+    name: Yup.string()
+      .min(2, "Name must be at least 2 characters")
+      .max(50, "Name must be less than 50 characters")
+      .matches(
+        /^[a-zA-Z\s\u0600-\u06FF]+$/,
+        "Name can only contain letters and spaces"
+      )
+      .required("Name is required"),
+  });
   const onSubmit = async (values) => {
     try {
       // Sending email using EmailJS
       const result = await emailjs.send(
-        "service_pi5m2mg", // Service ID
-        "template_i4ewjd9", // Template ID
+        "service_o46wj0l", // Service ID
+        "template_5mp2r3b", // Template ID
         {
-          to_email: "nehaadelsaied@gmail.com",
-          from_name: values.name,
-          from_email: values.email,
+          to_email: "Abdelrahmanelsied7@gmail.com",
+          name: values.name,
+          email: values.email,
           location: values.location,
           budget: values.budget,
           subject: values.subject,
           message: values.message,
         },
-        "z4GTM4LBEfrSAk39v"); // Public Key
+        "LA1NIQehj9bp5XUMk"
+      ); // Public Key
 
       console.log("Email sent successfully:", result);
       toast.success("Message sent successfully! I will contact you soon.");
@@ -43,6 +55,7 @@ const Form = () => {
   };
   const formik = useFormik({
     initialValues,
+    validationSchema,
     onSubmit,
   });
 
@@ -57,15 +70,25 @@ const Form = () => {
           className="flex flex-col gap-4 mt-4"
           onSubmit={formik.handleSubmit}
         >
-          <input
-            type="text"
-            placeholder="Name*"
-            name="name"
-            value={formik.values.name}
-            onChange={formik.handleChange}
-            className={`${commonClass}`}
-            required
-          />
+          <div>
+            <input
+              type="text"
+              placeholder="Name*"
+              name="name"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              className={`${commonClass} ${
+                formik.touched.name && formik.errors.name
+                  ? "border-red-500"
+                  : ""
+              }`}
+              required
+            />
+            {formik.touched.name && formik.errors.name && (
+              <p className="text-red-500 text-sm mt-1">{formik.errors.name}</p>
+            )}
+          </div>
           <input
             type="email"
             placeholder="Email*"

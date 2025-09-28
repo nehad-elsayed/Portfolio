@@ -5,7 +5,6 @@ import logo from "../../../assets/A-logo.ico";
 const navItems = [
   { id: 1, name: "Home", url: "Home" },
   { id: 2, name: "About", url: "About" },
-  { id: 3, name: "Process", url: "Process" },
   { id: 4, name: "Portfolio", url: "Portfolio" },
   { id: 5, name: "Blog", url: "Blog" },
   { id: 6, name: "Services", url: "Services" },
@@ -43,17 +42,17 @@ const Footer = () => {
           ))}
         </div>
         <p className="text-[12px] sm:text-[16px]">
-          Copyright &copy; {copyrightYear} Picto.
+          Copyright &copy; {copyrightYear} Abdelrahman Elsayed.
         </p>
       </div>
       <p className="text-white text-center max-xs:text-[12px] max-md:text-[14px] w-full py-10">
         Developed with ❤️ by{" "}
         <a
-          href="https://www.themewagon.com"
+          href="https://www.linkedin.com/in/nehad-elsayed/"
           className="underline font-bold"
           target="_blank"
         >
-          ThemeWagon
+          Nehad Elsayed
         </a>
       </p>
     </div>

@@ -21,7 +21,7 @@ const addressData = [
   {
     icon: faPhone,
     title: "Call Me Now",
-    description: "002 01028222116",
+    description: "+201028222116",
   },
 ];
 
