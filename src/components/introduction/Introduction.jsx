@@ -1,8 +1,10 @@
 import person from "../../assets/images/person.png";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
+import { Link } from "react-router-dom";
 
 // Information summary data
+const phoneNumber = "+201097476242";
 const informationSummaryData = [
   {
     id: 1,
@@ -29,9 +31,9 @@ const Introduction = () => {
     >
       <div className="w-full flex flex-col justify-between max-lg:text-center">
         <div className="pt-13 me-31.5 w-full lg:w-auto transition-all duration-500">
-          <p className="text-3xl xxs:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
+          <p className="text-2xl md:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
             Hello, I’m
-            <span className="text-nowrap shrink-0 inline-block w-full">
+            <span className="text-nowrap text-lg md:text-[32px] shrink-0 inline-block w-full">
               Abdelrahman Elsayed
             </span>
           </p>
@@ -51,12 +53,13 @@ const Introduction = () => {
             achieving measurable performance results and business growth.
           </p>
           <p className="text-center lg:text-start">
-            <a
-              className="btn-primary btn btn-xs xxs:btn-lg text-white"
-              href="tel:+201028222116"
+            <Link
+              to={`https://wa.me/${phoneNumber}?text=Hello Can i schedule a free audit consultation?`}
+              className="mt-5 md:mt-12.5 btn btn-primary text-white w-fit md:py-3 md:px-6 text-[12px] sm:text-[16px] font-semibold max-md:mx-auto max-md:mb-5"
+              target="_blank"
             >
               Say Hello!
-            </a>
+            </Link>
           </p>
         </div>
         <div className="mx-auto lg:mx-0 relative">

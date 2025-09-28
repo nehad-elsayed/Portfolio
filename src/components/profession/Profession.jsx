@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Roles from "./Roles";
 
 const rolesData = [
@@ -21,6 +22,8 @@ const rolesData = [
   },
 ];
 
+const phoneNumber = "+201097476242";
+
 const Profession = () => {
   return (
     <div
@@ -41,12 +44,19 @@ const Profession = () => {
             users.
           </p>
         </div>
-        <a
+        {/* <a
           href="tel:+201028222116"
           className="mt-5 md:mt-12.5 btn btn-primary text-white w-fit md:py-3 md:px-6 text-[12px] sm:text-[16px] font-semibold max-md:mx-auto max-md:mb-5"
         >
+         
+        </a> */}
+        <Link
+          to={`https://wa.me/${phoneNumber}?text=Hello Can i schedule a free audit consultation?`}
+          target="_blank"
+          className="mt-5 md:mt-12.5 btn btn-primary text-white w-fit md:py-3 md:px-6 text-[12px] sm:text-[16px] font-semibold max-md:mx-auto max-md:mb-5"
+        >
           Say Hello!
-        </a>
+        </Link>
       </div>
       <div className="">
         {rolesData.map((role, index) => (
