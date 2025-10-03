@@ -2,6 +2,9 @@ import person from "../../assets/images/person2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+import { CV_URL } from "../../constants";
 
 const Profile = () => {
   return (
@@ -30,37 +33,35 @@ const Profile = () => {
         </div>
 
         <div className="max-sm:w-full w-[33rem]">
-          <h2
-            className={`text-2xl xxs:text-3xl sm:text-4xl lg:text-[38px] text-[min(24px,38px)] max-md:text-center font-semibold mb-8`}
-          >
+          <h2 className="text-sm  lg:text-[30px] text-[min(24px,38px)] max-md:text-center font-semibold mb-8">
             I am Professional Performance Marketer & Media Buyer
           </h2>
-          <div
-            className={`text-xs xs:text-[16px] lg:text-lg font-normal max-md:text-center text-gray-600`}
-          >
-            <p className={``}>
-             I plan,
-              execute, and optimize campaigns for businesses, specializing in
-              creating data-driven strategies that drive measurable growth and
-              ROI. My passion is helping brands scale through smart advertising
-              and precision targeting. I focus on delivering high-performing
-              campaigns across digital platforms, ensuring every ad spend
-              generates maximum impact.
+          <div className="text-base md:text-[20px] lg:text-[24px] font-normal max-md:text-center text-gray-600">
+            <p>
+              I plan, execute, and optimize campaigns for businesses,
+              specializing in creating data-driven strategies that drive
+              measurable growth and ROI. My passion is helping brands scale
+              through smart advertising and precision targeting. I focus on
+              delivering high-performing campaigns across digital platforms,
+              ensuring every ad spend generates maximum impact.
             </p>
           </div>
           <div className="mt-8 flex max-md:justify-center">
-            <a
+            <ScrollLink
               className="btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 btn-primary text-xs xxs:text-[14px] sm:text-[16px]"
-              href="#!"
+              to="portfolio"
+              smooth={true}
+              duration={1000}
             >
               My Projects
-            </a>
-            <a
+            </ScrollLink>
+            <Link
               className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary  ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
-              href="https://drive.google.com/file/d/1yH1kG_6ItCz1pNNaYspZMpexn-bA6dVM/view?usp=drive_link"
+              to={`${CV_URL}`}
+              target="_blank"
             >
               <FontAwesomeIcon icon={faDownload} /> Download CV
-            </a>
+            </Link>
           </div>
         </div>
       </div>

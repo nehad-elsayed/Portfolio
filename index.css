@@ -4,7 +4,9 @@
   themes: light --default, dark --prefersdark, cupcake;
 }
 
+
 * {
+ scroll-padding-top: 100px !important;
   transition-property: all;
   transition-timing-function: var(
     --tw-ease,

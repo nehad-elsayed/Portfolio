@@ -1,28 +1,35 @@
 import { Link } from "react-router-dom";
 import Roles from "./Roles";
+import { PHONE_NUMBER } from "../../constants";
 
 const rolesData = [
   {
     id: 1,
-    title: "User Experience (UX)",
+    title: "Paid Advertising (Meta, TikTok, Google, Snapchat Ads)",
     description:
-      "I design intuitive and enjoyable experiences by understanding user needs, conducting research, and creating wireframes and prototypes that enhance usability.",
+      "I manage and optimize ad campaigns across multiple platforms, focusing on audience targeting, A/B testing, and scaling profitable campaigns.",
   },
   {
     id: 2,
-    title: "User Interface (UI)",
+    title: "Performance Strategy & Media Planning",
     description:
-      "I craft visually appealing and consistent interfaces, focusing on layout, color, and typography to ensure a seamless and engaging user journey.",
+      "I create tailored strategies and media plans that align with your business goals, budgets, and KPIs to ensure maximum impact.",
   },
   {
     id: 3,
-    title: "Web Development",
+    title: "Tracking & Analytics",
     description:
-      "I build responsive and high-performance web applications using modern technologies, ensuring accessibility, scalability, and maintainability.",
+      "From setting up pixels and server tracking to analyzing campaign data, I ensure accurate tracking and provide actionable insights to improve performance.",
+  },
+  {
+    id: 4,
+    title: "Conversion Rate Optimization (CRO)",
+    description:
+      "I optimize landing pages, ad creatives, and user journeys to improve conversion rates and reduce customer acquisition costs.",
   },
 ];
 
-const phoneNumber = "+201097476242";
+
 
 const Profession = () => {
   return (
@@ -34,24 +41,19 @@ const Profession = () => {
         <p className="section-title max-md:text-center">What I do?</p>
         <div className="mt-6 text-[14px]">
           <p className="text-xs sm:text-lg font-normal text-gray-400 mb-4">
-            I specialize in designing user experiences, crafting engaging
-            interfaces, and building robust web applications that deliver value
-            and usability.
+            I specialize in creating data-driven marketing campaigns that drive
+            measurable growth. From strategy to execution, I help businesses
+            scale with performance-focused advertising.
           </p>
           <p className="text-xs sm:text-lg font-normal text-gray-400">
-            My approach combines creativity and technical expertise to deliver
-            solutions that are both visually appealing and highly functional for
-            users.
+            My approach combines creativity with analytics to deliver campaigns
+            that are not only engaging but also deliver strong ROI and
+            sustainable results.
           </p>
         </div>
-        {/* <a
-          href="tel:+201028222116"
-          className="mt-5 md:mt-12.5 btn btn-primary text-white w-fit md:py-3 md:px-6 text-[12px] sm:text-[16px] font-semibold max-md:mx-auto max-md:mb-5"
-        >
-         
-        </a> */}
+
         <Link
-          to={`https://wa.me/${phoneNumber}?text=Hello Can i schedule a free audit consultation?`}
+          to={`https://wa.me/${PHONE_NUMBER}?text=Hello Can i schedule a free audit consultation?`}
           target="_blank"
           className="mt-5 md:mt-12.5 btn btn-primary text-white w-fit md:py-3 md:px-6 text-[12px] sm:text-[16px] font-semibold max-md:mx-auto max-md:mb-5"
         >
@@ -59,8 +61,8 @@ const Profession = () => {
         </Link>
       </div>
       <div className="">
-        {rolesData.map((role, index) => (
-          <Roles role={role} key={index} />
+        {rolesData.map((role) => (
+          <Roles role={role} key={role?.id} />
         ))}
       </div>
     </div>

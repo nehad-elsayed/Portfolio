@@ -9,7 +9,7 @@ const informationSummaryData = [
   {
     id: 1,
     title: "Experience",
-    description: "1.5 Y.",
+    description: "2 Years",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const informationSummaryData = [
   {
     id: 3,
     title: "Happy Clients",
-    description: "5",
+    description: "10+",
   },
 ];
 
@@ -37,11 +37,11 @@ const Introduction = () => {
               Abdelrahman Elsayed
             </span>
           </p>
-          <p className="text-xs xxs:text-lg lg:text-[18px] my-6">
-            <span className="font-semibold bg-highlight text-sm text-nowrap">
+          <p className="text-xs  md:text-[24px] my-6">
+            <span className="font-semibold bg-highlight  text-nowrap">
               Performance Marketer & Media Buyer
             </span>{" "}
-            with over 1.5 year of consistent experience (and earlier hands-on
+            with over 2 years of consistent experience (and earlier hands-on
             work since 2016), combining both freelance and in-agency experience.
             Specialized in running high-converting paid campaigns across Meta,
             TikTok, Snapchat, Google, and X for the Egyptian and Gulf markets.

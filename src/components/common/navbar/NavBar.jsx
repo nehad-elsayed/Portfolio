@@ -100,7 +100,7 @@ const NavBar = () => {
         </div>
 
         <div className="lg:flex items-center">
-          <ul className="hidden lg:flex menu menu-horizontal text-[16px] font-medium md:shrink-0">
+          <ul className="hidden lg:flex menu menu-horizontal text-base md:text-[20px] font-medium md:shrink-0">
             {menu}
           </ul>
           <p className="">
