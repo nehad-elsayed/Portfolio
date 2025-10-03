@@ -26,7 +26,7 @@ const Home = () => {
         <WorkTogether />
       </div>
       <div className="blog-background">
-        {/* <Blog /> */}
+        <Blog />
       </div>
       <div className="bg-soft-white">
         <Profession />

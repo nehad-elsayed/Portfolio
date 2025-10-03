@@ -40,12 +40,12 @@ const Profession = () => {
       <div className="flex flex-col justify-between h-fit md:pe-8 lg:pe-35.75 max-md:text-center my-auto">
         <p className="section-title max-md:text-center">What I do?</p>
         <div className="mt-6 text-[14px]">
-          <p className="text-xs sm:text-lg font-normal text-gray-400 mb-4">
+          <p className="text-xs sm:text-lg font-normal text-gray-500 mb-4">
             I specialize in creating data-driven marketing campaigns that drive
             measurable growth. From strategy to execution, I help businesses
             scale with performance-focused advertising.
           </p>
-          <p className="text-xs sm:text-lg font-normal text-gray-400">
+          <p className="text-xs sm:text-lg font-normal text-gray-500">
             My approach combines creativity with analytics to deliver campaigns
             that are not only engaging but also deliver strong ROI and
             sustainable results.
