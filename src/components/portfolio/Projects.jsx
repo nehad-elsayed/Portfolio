@@ -1,7 +1,20 @@
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import Modal from "../modal/modal";
+import { useState } from "react";
 
 const Projects = ({ data }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  //*ToDo:: add array of posts data here inside use useCallback
+
   return (
     <div className="max-w-106 rounded-lg outline-[#FFFFFF] hover:shadow-2xl duration-300 transition-all shadow-gray-300 border border-gray-200">
       <img src={data?.image} alt={`${data?.title} image`} />
@@ -16,16 +29,28 @@ const Projects = ({ data }) => {
         >
           {data?.description}
         </p>
-        <a
-          href={data?.link}
+        <button
+          // to={data?.link}
           className="btn hover:border-picto-primary hover:text-picto-primary bg-white text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 mt-5 xs:py-5.75 px-6 max-sm:w-full"
+          onClick={handleOpen}
         >
           Case Study
-          <span className="ms-1 xs:ms-3">
+          {/* <span className="ms-1 xs:ms-3">
             <FontAwesomeIcon icon={faArrowRight} size="l" className="" />
-          </span>
-        </a>
-        {/* </p> */}
+          </span> */}
+        </button>
+        <Modal isOpen={isOpen} onClose={handleClose}>
+          <div>
+            <h2 className="text-sm font-semibold md:text-[24px] text-nowrap">
+              {data?.title}
+            </h2>
+            <hr className="my-2 text-gray-300" />
+            <p className="text-sm md:text-lg  text-gray-600 mb-2">
+              {data?.description}
+            </p>
+            <span className="text-sm font-semibold text-gray-600"> Category: {data?.category} </span>
+          </div>
+        </Modal>
       </div>
     </div>
   );

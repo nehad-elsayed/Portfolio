@@ -15,13 +15,13 @@ const Profile = () => {
       <div className="flex max-md:flex-col justify-between items-center gap-6">
         {/* Profile image */}
         <div className="xxl:max-w-106 w-auto h-auto xxl:max-h-126">
-          <div className="max-w-106 h-117 object-fill overflow-hidden rounded-xl">
+          {/* <div className="max-w-106 h-117 object-fill overflow-hidden rounded-xl">
             <img
               className="bg-soft-white h-[120%] object-cover"
               src={person}
               alt=""
             />
-          </div>
+          </div> */}
           {/* Social media section */}
           <div className="relative bottom-9">
             <div className="flex justify-center">

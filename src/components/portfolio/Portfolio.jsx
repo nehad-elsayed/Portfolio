@@ -64,6 +64,7 @@ const projectData = [
 ];
 
 const Portfolio = () => {
+
   return (
     <div
       className="content mt-10 md:mt-15 xl:mt-25 mb-10 md:mb-25 max-xxl:p-2"
@@ -80,19 +81,19 @@ const Portfolio = () => {
       </div>
       <div className="mx-auto flex justify-center">
         <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-6">
-          {projectData.map((data, index) => (
-            <Projects data={data} key={index} />
+          {projectData.map((data) => (
+            <Projects data={data} key={data.id}  />
           ))}
         </div>
       </div>
-      <div className="text-center">
+      {/* <div className="text-center">
         <a
           href="#!"
           className="btn btn-primary py-3 px-6 mt-12.5 text-center text-[16px] font-semibold"
         >
           More Project
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
