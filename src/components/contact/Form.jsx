@@ -25,6 +25,17 @@ const Form = () => {
         "Name can only contain letters and spaces"
       )
       .required("Name is required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    location: Yup.string()
+      .required("Location is required"),
+    budget: Yup.string()
+      .required("Budget is required"),
+    subject: Yup.string()
+      .required("Subject is required"),
+    message: Yup.string()
+      .required("Message is required"),
   });
   const onSubmit = async (values) => {
     try {
@@ -70,7 +81,7 @@ const Form = () => {
           className="flex flex-col gap-4 mt-4"
           onSubmit={formik.handleSubmit}
         >
-          <div>
+          <div className="">
             <input
               type="text"
               placeholder="Name*"
@@ -78,7 +89,7 @@ const Form = () => {
               value={formik.values.name}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              className={`${commonClass} ${
+              className={`dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:p-1.5 ${commonClass} ${
                 formik.touched.name && formik.errors.name
                   ? "border-red-500"
                   : ""
@@ -93,50 +104,69 @@ const Form = () => {
             type="email"
             placeholder="Email*"
             name="email"
+            onBlur={formik.handleBlur}
             value={formik.values.email}
             onChange={formik.handleChange}
-            className={`${commonClass}`}
+            className={`${commonClass} dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:p-1.5`}
             required
           />
+          {formik.touched.email && formik.errors.email && (
+            <p className="text-red-500 text-sm mt-1">{formik.errors.email}</p>
+          )}
           <input
             type="text"
             placeholder="Location*"
             name="location"
+            onBlur={formik.handleBlur}
             value={formik.values.location}
             onChange={formik.handleChange}
-            className={`${commonClass}`}
+            className={`${commonClass}  dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:p-1.5`}
             required
           />
-
+          {formik.touched.location && formik.errors.location && (
+            <p className="text-red-500 text-sm mt-1">{formik.errors.location}</p>
+          )}
           <div className="flex max-xs:flex-col max-xs:gap-4">
             <input
               type="text"
               placeholder="Budget*"
               name="budget"
-              value={formik.values.budget}
+              value={formik.values.budget}  
+              onBlur={formik.handleBlur}
               onChange={formik.handleChange}
-              className={`${commonClass} xs:w-[50%] me-5`}
+              className={`${commonClass} xs:w-[50%] me-1 dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:p-1.5`}
               required
             />
+            {formik.touched.budget && formik.errors.budget && (
+              <p className="text-red-500 text-sm mt-1">{formik.errors.budget}</p>
+            )}
             <input
               type="text"
               placeholder="Subject*"
               name="subject"
+              onBlur={formik.handleBlur}
               value={formik.values.subject}
               onChange={formik.handleChange}
-              className={`${commonClass}`}
+              className={`me-1 ${commonClass} dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:p-1.5`}
               required
             />
+            {formik.touched.subject && formik.errors.subject && (
+              <p className="text-red-500 text-sm mt-1">{formik.errors.subject}</p>
+            )}
           </div>
 
           <textarea
             placeholder="Message*"
             name="message"
             value={formik.values.message}
+            onBlur={formik.handleBlur}
             onChange={formik.handleChange}
-            className={`${commonClass} min-h-[100px] resize-none`}
+            className={`${commonClass} min-h-[100px] resize-none dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:p-1.5`}
             required
           />
+          {formik.touched.message && formik.errors.message && (
+            <p className="text-red-500 text-sm mt-1">{formik.errors.message}</p>
+          )}
           <button
             type="submit"
             className="btn gap-3 max-lg:mx-auto btn-primary rounded-sm mt-5 text-[13px] md:text-[16px] w-fit font-semibold lg:mt-12.5 p-4 "

@@ -74,7 +74,7 @@ const Introduction = () => {
         className={`max-w-134 w-full h-full max-lg:mx-auto aspect-[536/636] relative`}
       >
         <img
-          className={`shadow-2xl shadow-gray-200 w-full h-full absolute bottom-0 object-cover bg-white rounded-3xl`}
+          className={`shadow-2xl shadow-gray-200 dark:shadow-gray-700 w-full h-full absolute bottom-0 object-cover bg-white rounded-3xl`}
           src={person}
           alt="person"
         />

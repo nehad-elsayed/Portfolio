@@ -9,6 +9,7 @@ import "./testimonial.css";
 
 const testimonialData = [
   {
+    id: "1",
     message:
       "Working with this team was a fantastic experience. Their attention to detail and commitment to quality exceeded our expectations.",
     quote: `From the initial consultation to the final delivery, every step was handled professionally. The end result was a product that not only met our needs but also impressed our stakeholders. Highly recommended!`,
@@ -16,6 +17,7 @@ const testimonialData = [
     designation: "Managing Director, ABC Company",
   },
   {
+    id: "2",
     message:
       "Their expertise in UI/UX design helped us transform our digital presence and improve user engagement.",
     quote: `The team demonstrated a deep understanding of our requirements and delivered a solution that was both visually appealing and highly functional. Communication was clear throughout the project.`,
@@ -23,6 +25,7 @@ const testimonialData = [
     designation: "COO, XYZ Company",
   },
   {
+    id: "3",
     message:
       "Professional, reliable, and creative—everything you want in a development partner.",
     quote: `They delivered our project on time and went above and beyond to ensure our satisfaction. The new features have made a significant difference for our users. We look forward to working together again.`,
@@ -45,10 +48,10 @@ const Testimonial = () => {
           }}
           modules={[EffectFade, Navigation, Pagination]}
         >
-          {testimonialData.map((testimonial, index) => (
-            <SwiperSlide key={index}>
+          {testimonialData.map((testimonial) => (
+            <SwiperSlide key={testimonial.id}>
               <TestimonialTemplate testimonial={testimonial} />
-            </SwiperSlide>
+            </SwiperSlide >
           ))}
         </Swiper>
       </div>

@@ -29,8 +29,9 @@ const menu = navItems.map((item) => (
       activeStyle={{
         backgroundColor: "#9929fb",
         color: "white",
+        
       }}
-      className={`hover:text-picto-primary px-5 py-3 mx-1`}
+      className={`hover:text-picto-primary px-5 py-3 mx-1 dark:text-picto-primary dark:lg:text-white`}
     >
       {item.name}
     </Link>
@@ -52,13 +53,13 @@ const NavBar = () => {
 
   return (
     <div
-      className={`sticky top-0 ${
+      className={`sticky top-0 dark:bg-[#1D232A] ${
         position > 50
           ? "bg-soft-white border-b border-gray-300"
           : "bg-white border-white"
       } z-50 transition-all duration-1000`}
     >
-      <div className="navbar flex justify-between mx-auto content">
+      <div className="navbar flex justify-between mx-auto content ">
         <div className="flex items-center justify-between">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -93,7 +94,7 @@ const NavBar = () => {
             className="flex items-center border-0 lg:max-xxl:ps-5"
           >
             <img src={logo} className="h-8 sm:h-14 rounded-2xl" alt="logo" />
-            <p className="text-lg md:text-[32px] my-auto ms-[12px] font-semibold">
+            <p className="text-lg dark:text-white md:text-[32px] my-auto ms-[12px] font-semibold">
               Abdelrahman
             </p>
           </Link>

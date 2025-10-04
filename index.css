@@ -2,12 +2,12 @@
 @plugin "daisyui";
 
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, cupcake;
+  themes: light --default, dark --prefersdark, cupcake ,system;
 }
 
 
 * {
-  scroll-padding-top: 100px !important;
+ 
   transition-property: all;
   transition-timing-function: var(--tw-ease,
       var(--default-transition-timing-function));
