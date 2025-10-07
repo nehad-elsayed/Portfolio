@@ -152,7 +152,7 @@ const Form = () => {
               value={formik.values.budget}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
-              className={`${commonClass} xs:w-[50%] me-1 dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-[10px] placeholder:p-1.5`}
+              className={`${commonClass} me-1 dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-[10px] placeholder:p-1.5`}
               required
             />
           </div>
