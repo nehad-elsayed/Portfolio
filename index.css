@@ -2,12 +2,11 @@
 @plugin "daisyui";
 
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, cupcake ,system;
+  themes: light --default, dark --prefersdark, cupcake, system;
 }
 
 
 * {
- 
   transition-property: all;
   transition-timing-function: var(--tw-ease,
       var(--default-transition-timing-function));

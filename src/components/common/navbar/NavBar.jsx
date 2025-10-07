@@ -29,7 +29,6 @@ const menu = navItems.map((item) => (
       activeStyle={{
         backgroundColor: "#9929fb",
         color: "white",
-        
       }}
       className={`hover:text-picto-primary px-5 py-3 mx-1 dark:text-picto-primary dark:lg:text-white`}
     >

@@ -28,14 +28,10 @@ const Form = () => {
     email: Yup.string()
       .email("Invalid email address")
       .required("Email is required"),
-    location: Yup.string()
-      .required("Location is required"),
-    budget: Yup.string()
-      .required("Budget is required"),
-    subject: Yup.string()
-      .required("Subject is required"),
-    message: Yup.string()
-      .required("Message is required"),
+    location: Yup.string().required("Location is required"),
+    budget: Yup.string().required("Budget is required"),
+    subject: Yup.string().required("Subject is required"),
+    message: Yup.string().required("Message is required"),
   });
   const onSubmit = async (values) => {
     try {
@@ -82,14 +78,18 @@ const Form = () => {
           onSubmit={formik.handleSubmit}
         >
           <div className="">
+            <label className="dark:text-picto-primary" htmlFor="name">
+              Name
+            </label>
             <input
               type="text"
-              placeholder="Name*"
+              id="name"
+              placeholder="Enter your name"
               name="name"
               value={formik.values.name}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              className={`dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:p-1.5 ${commonClass} ${
+              className={`dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-sm placeholder:p-1.5 ${commonClass} ${
                 formik.touched.name && formik.errors.name
                   ? "border-red-500"
                   : ""
@@ -100,70 +100,98 @@ const Form = () => {
               <p className="text-red-500 text-sm mt-1">{formik.errors.name}</p>
             )}
           </div>
-          <input
-            type="email"
-            placeholder="Email*"
-            name="email"
-            onBlur={formik.handleBlur}
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            className={`${commonClass} dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:p-1.5`}
-            required
-          />
+          <div className="">
+            <label className="dark:text-picto-primary" htmlFor="email">
+              Email
+            </label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              id="email"
+              name="email"
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              className={`${commonClass} dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-sm placeholder:p-1.5`}
+              required
+            />
+          </div>
           {formik.touched.email && formik.errors.email && (
             <p className="text-red-500 text-sm mt-1">{formik.errors.email}</p>
           )}
-          <input
-            type="text"
-            placeholder="Location*"
-            name="location"
-            onBlur={formik.handleBlur}
-            value={formik.values.location}
-            onChange={formik.handleChange}
-            className={`${commonClass}  dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:p-1.5`}
-            required
-          />
-          {formik.touched.location && formik.errors.location && (
-            <p className="text-red-500 text-sm mt-1">{formik.errors.location}</p>
-          )}
-          <div className="flex max-xs:flex-col max-xs:gap-4">
+          <div className="">
+            <label className="dark:text-picto-primary" htmlFor="location">
+              Target Location
+            </label>
             <input
               type="text"
-              placeholder="Budget*"
-              name="budget"
-              value={formik.values.budget}  
+              placeholder="EX. Egypt, USA, KSA, UAE, etc."
+              id="location"
+              name="location"
               onBlur={formik.handleBlur}
+              value={formik.values.location}
               onChange={formik.handleChange}
-              className={`${commonClass} xs:w-[50%] me-1 dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:p-1.5`}
+              className={`${commonClass}  dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-sm placeholder:p-1.5`}
               required
             />
-            {formik.touched.budget && formik.errors.budget && (
-              <p className="text-red-500 text-sm mt-1">{formik.errors.budget}</p>
-            )}
+          </div>
+          {formik.touched.location && formik.errors.location && (
+            <p className="text-red-500 text-sm mt-1">
+              {formik.errors.location}
+            </p>
+          )}
+          <div className="">
+            <label className="dark:text-picto-primary" htmlFor="budget">
+              Budget
+            </label>
             <input
               type="text"
-              placeholder="Subject*"
+              placeholder="EX. 300$/month etc."
+              id="budget"
+              name="budget"
+              value={formik.values.budget}
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              className={`${commonClass} xs:w-[50%] me-1 dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-[10px] placeholder:p-1.5`}
+              required
+            />
+          </div>
+          {formik.touched.budget && formik.errors.budget && (
+            <p className="text-red-500 text-sm mt-1">{formik.errors.budget}</p>
+          )}
+          <div className="">
+            <label className="dark:text-picto-primary" htmlFor="subject">
+              Subject
+            </label>
+            <input
+              type="text"
+              placeholder="Niche or Field"
+              id="subject"
               name="subject"
               onBlur={formik.handleBlur}
               value={formik.values.subject}
               onChange={formik.handleChange}
-              className={`me-1 ${commonClass} dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:p-1.5`}
+              className={`me-1 ${commonClass} dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-[10px] placeholder:p-1.5`}
               required
             />
-            {formik.touched.subject && formik.errors.subject && (
-              <p className="text-red-500 text-sm mt-1">{formik.errors.subject}</p>
-            )}
           </div>
-
+          {formik.touched.subject && formik.errors.subject && (
+            <p className="text-red-500 text-sm mt-1">{formik.errors.subject}</p>
+          )}
+          <div className="">
+            <label className="dark:text-picto-primary" htmlFor="message">Message</label>
           <textarea
-            placeholder="Message*"
+            placeholder="Your message to me . . . "
+            id="message"
+            label="Message"
             name="message"
             value={formik.values.message}
             onBlur={formik.handleBlur}
             onChange={formik.handleChange}
-            className={`${commonClass} min-h-[100px] resize-none dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:p-1.5`}
+            className={`${commonClass} min-h-[100px] resize-none dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-[10px] placeholder:p-1.5`}
             required
           />
+          </div>
           {formik.touched.message && formik.errors.message && (
             <p className="text-red-500 text-sm mt-1">{formik.errors.message}</p>
           )}
