@@ -68,7 +68,7 @@ const brandLogos = [
       alt="Aflaa"
       width={200}
       height={150}
-      className="bg-transparent p-3"
+      className="bg-transparent  p-3"
     />
   </Link>,
   <Link to="https://sdollgroup.com/" target="_blank">
@@ -86,14 +86,14 @@ const brandLogos = [
       alt="IT"
       width={200}
       height={150}
-      className="bg-transparent p-3"
+      className="bg-transparent  p-3"
     />
   </Link>,
   <Link to="https://al-yem.com/" target="_blank">
     <img
       src={Alyem}
       alt="Alyem"
-      className="bg-black/90 w-48 h-40 rounded-lg p-3"
+      className=" w-48 h-40 rounded-lg p-3"
     />
   </Link>,
 
@@ -101,7 +101,7 @@ const brandLogos = [
     <img
       src={LamasatNoor}
       alt="LamasatNoor"
-      className="bg-transparent w-48 h-44  p-3"
+      className="bg-transparent w-48 rounded-lg h-44  p-3"
     />
   </Link>,
   <Link to="http://regaleyes.sa/" target="_blank">
@@ -124,11 +124,11 @@ const brandLogos = [
   </Link>,
 
   <Link to="http://raeelonline.com/" target="_blank">
-    <img src={Raeel} alt="Raeel" className="bg-transparent w-48 h-40  p-3" />
+    <img src={Raeel} alt="Raeel" className="bg-transparent  w-48 h-40  p-3" />
   </Link>,
 
   <Link to="http://obexchange-sa.com/" target="_blank">
-    <img src={OB} alt="OB" className="bg-transparent w-48 h-40  p-3" />
+    <img src={OB} alt="OB" className="bg-transparent w-48  h-40  p-3" />
   </Link>,
 
   // <>
