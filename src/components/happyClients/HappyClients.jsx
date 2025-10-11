@@ -44,7 +44,7 @@ const brandLogos = [
       className="bg-black/90 rounded-lg p-3"
     />
   </Link>,
-    <Link to="https://albasami.com/" target="_blank">
+  <Link to="https://albasami.com/" target="_blank">
     <img
       src={MB}
       alt="MB"
@@ -53,15 +53,15 @@ const brandLogos = [
       className="bg-transparent p-3"
     />
   </Link>,
-   <Link to="http://myad.com.sa/" target="_blank">
-   <img
-     src={Mayad}
-     alt="Mayad"
-     width={200}
-     height={100}
-     className="bg-gray-700 p-3 rounded-lg"
-   />
- </Link>,
+  <Link to="http://myad.com.sa/" target="_blank">
+    <img
+      src={Mayad}
+      alt="Mayad"
+      width={200}
+      height={100}
+      className="bg-gray-700 p-3 rounded-lg"
+    />
+  </Link>,
   <Link to="https://aflaaalrayes.com/" target="_blank">
     <img
       src={Aflaa}
@@ -93,9 +93,7 @@ const brandLogos = [
     <img
       src={Alyem}
       alt="Alyem"
-      width={200}
-      height={150}
-      className="bg-black/90 rounded-lg p-3"
+      className="bg-black/90 w-48 h-40 rounded-lg p-3"
     />
   </Link>,
 
@@ -103,58 +101,34 @@ const brandLogos = [
     <img
       src={LamasatNoor}
       alt="LamasatNoor"
-      width={200}
-      height={150}
-      className="bg-white p-3"
+      className="bg-transparent w-48 h-44  p-3"
     />
   </Link>,
-   <Link to="http://regaleyes.sa/" target="_blank">
-   <img
-     src={RegalEyes}
-     alt="RegalEyes"
-     width={200}
-     height={150}
-     className="bg-transparent rounded-lg p-3"
-   />
- </Link>,
+  <Link to="http://regaleyes.sa/" target="_blank">
+    <img
+      src={RegalEyes}
+      alt="RegalEyes"
+      className="bg-transparent  dark:bg-white w-48 h-40  rounded-lg p-3"
+    />
+  </Link>,
 
   <Link to="https://numolink.com/" target="_blank">
-    <img
-      src={Nmow}
-      alt="Nmow"
-      width={200}
-      height={150}
-      className="bg-transparent p-3"
-    />
+    <img src={Nmow} alt="Nmow" className="bg-transparent  w-48 h-40 p-3" />
   </Link>,
   <Link to="https://gardeniaclinic.com/" target="_blank">
     <img
       src={Gardenia}
       alt="Gardenia"
-      width={200}
-      height={150}
-      className="bg-transparent p-3"
+      className="bg-transparent dark:bg-white w-48 h-40  rounded-lg p-3"
     />
   </Link>,
 
   <Link to="http://raeelonline.com/" target="_blank">
-    <img
-      src={Raeel}
-      alt="Raeel"
-      width={200}
-      height={150}
-      className="bg-transparent p-3"
-    />
+    <img src={Raeel} alt="Raeel" className="bg-transparent w-48 h-40  p-3" />
   </Link>,
 
   <Link to="http://obexchange-sa.com/" target="_blank">
-    <img
-      src={OB}
-      alt="OB"
-      width={200}
-      height={150}
-      className="bg-transparent p-3"
-    />
+    <img src={OB} alt="OB" className="bg-transparent w-48 h-40  p-3" />
   </Link>,
 
   // <>
