@@ -38,7 +38,7 @@ const brandLogos = [
       className="bg-black/90 size-16 md:size-20 lg:w-48 lg:h-40 rounded-lg p-3"
     />
   </Link>,
-  <Link to="https://albasami.com/" target="_blank">
+  <Link to="https://mbagri.com/" target="_blank">
     <img
       src={MB}
       alt="MB"
