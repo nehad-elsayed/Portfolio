@@ -5,20 +5,19 @@ const WorkSteps = ({ data, style }) => {
 
   return (
     <div
-      className={`rounded-xl hover:drop-shadow-2xl shadow-gray-300 ease-out duration-1000  ${ style && style}`}
+      className={`rounded-xl hover:drop-shadow-2xl shadow-gray-300 ease-out duration-1000  ${
+        style && style
+      }`}
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
     >
       <div
-        className={`w-11 h-11 sm:w-18 sm:h-18 ${hover ? "bg-[#d8b5f980]" : "bg-[#EDD8FF80]"} text-center center rounded-md`}
+        className={`w-11 h-11 sm:w-18 sm:h-18 ${
+          hover ? "bg-[#d8b5f980]" : "bg-[#EDD8FF80]"
+        } text-center center rounded-md`}
       >
         <div className="max-sm:p-2 sm:w-8 sm:h-8">
-          <img
-          className=""
-            src={data?.icon}
-            alt={data?.icon}
-          />
-          
+          <img className="" src={data?.icon} alt={data?.icon} />
         </div>
       </div>
       <div className="mt-3 xs:mt-4 sm:mt-8">
