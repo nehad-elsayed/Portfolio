@@ -23,15 +23,14 @@ const Profile = () => {
             />
           </div> */}
           {/* Social media section */}
-          <div className="relative bottom-9  "></div>
         </div>
 
-        <div className="max-sm:w-full w-[33rem] ">
+        <div className="">
           <h2 className="text-sm text-center lg:text-[30px] text-[min(24px,38px)] max-md:text-center font-semibold mb-8">
             I am Professional Performance Marketer & Media Buyer
           </h2>
-          <div className="text-base md:text-[20px] lg:text-[24px] font-normal max-md:text-center text-gray-600">
-            <p className="text-center">
+          <div className="text-base md:text-[20px] lg:text-[24px] font-normal text-center text-gray-600">
+            <p className="text-center w-full">
               I plan, execute, and optimize campaigns for businesses,
               specializing in creating data-driven strategies that drive
               measurable growth and ROI. My passion is helping brands scale
