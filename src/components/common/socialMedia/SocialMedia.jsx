@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const socialIcons = [
   { icon: faFacebookF, link: "https://www.facebook.com/abdelrahman.elsied.71" },
   { icon: faInstagram, link: "https://www.instagram.com/boody_elsied" },
-  { icon: faLinkedin, link: "#!" },
+  { icon: faLinkedin, link: "https://www.linkedin.com/in/abdelrahman-elsied-777b4a341/" },
 ];
 
 const SocialMedia = () => {

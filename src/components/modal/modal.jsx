@@ -13,11 +13,11 @@ const Modal = ({ isOpen, onClose, children }) => {
       />
 
       {/* Modal Content */}
-      <div className="modal-content relative bg-white dark:bg-[#201b2a]  rounded-lg shadow-lg p-2  w-3/4 md:w-1/2 z-10">
+      <div className="modal-content relative bg-white text-gray-900 rounded-lg shadow-lg p-2  w-3/4 md:w-1/2 z-10">
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute cursor-pointer p-2 top-2 right-2 dark:text-white text-gray-500  transition-colors duration-200"
+          className="absolute cursor-pointer p-2 top-2 right-2 text-gray-500  transition-colors duration-200"
         >
           ✕
         </button>

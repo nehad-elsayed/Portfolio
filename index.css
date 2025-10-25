@@ -2,7 +2,7 @@
 @plugin "daisyui";
 
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, cupcake, system;
+  themes: light --default;
 }
 
 
@@ -32,8 +32,14 @@
   @apply bg-picto-primary border-0 text-white hover:scale-[102%] hover:bg-picto-primary-dark transition-all duration-500;
 }
 
+html {
+  color-scheme: light;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
+  background-color: white;
+  color: #1f2937;
 }
 
 .content {

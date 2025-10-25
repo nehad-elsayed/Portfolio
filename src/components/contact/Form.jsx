@@ -78,7 +78,7 @@ const Form = () => {
           onSubmit={formik.handleSubmit}
         >
           <div className="">
-            <label className="dark:text-picto-primary" htmlFor="name">
+            <label className="" htmlFor="name">
               Name
             </label>
             <input
@@ -89,7 +89,7 @@ const Form = () => {
               value={formik.values.name}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              className={`dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-sm placeholder:p-1.5 ${commonClass} ${
+              className={`p-2 placeholder:text-sm placeholder:p-1.5 ${commonClass} ${
                 formik.touched.name && formik.errors.name
                   ? "border-red-500"
                   : ""
@@ -101,7 +101,7 @@ const Form = () => {
             )}
           </div>
           <div className="">
-            <label className="dark:text-picto-primary" htmlFor="email">
+            <label className="" htmlFor="email">
               Email
             </label>
             <input
@@ -112,7 +112,7 @@ const Form = () => {
               onBlur={formik.handleBlur}
               value={formik.values.email}
               onChange={formik.handleChange}
-              className={`${commonClass} dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-sm placeholder:p-1.5`}
+              className={`${commonClass} p-2 placeholder:text-sm placeholder:p-1.5`}
               required
             />
           </div>
@@ -120,7 +120,7 @@ const Form = () => {
             <p className="text-red-500 text-sm mt-1">{formik.errors.email}</p>
           )}
           <div className="">
-            <label className="dark:text-picto-primary" htmlFor="location">
+            <label className="" htmlFor="location">
               Target Location
             </label>
             <input
@@ -131,7 +131,7 @@ const Form = () => {
               onBlur={formik.handleBlur}
               value={formik.values.location}
               onChange={formik.handleChange}
-              className={`${commonClass}  dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-sm placeholder:p-1.5`}
+              className={`${commonClass} p-2 placeholder:text-sm placeholder:p-1.5`}
               required
             />
           </div>
@@ -141,7 +141,7 @@ const Form = () => {
             </p>
           )}
           <div className="">
-            <label className="dark:text-picto-primary" htmlFor="budget">
+            <label className="" htmlFor="budget">
               Budget
             </label>
             <input
@@ -152,7 +152,7 @@ const Form = () => {
               value={formik.values.budget}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
-              className={`${commonClass} me-1 dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-[10px] placeholder:p-1.5`}
+              className={`${commonClass} me-1 p-2 placeholder:text-[10px] placeholder:p-1.5`}
               required
             />
           </div>
@@ -160,7 +160,7 @@ const Form = () => {
             <p className="text-red-500 text-sm mt-1">{formik.errors.budget}</p>
           )}
           <div className="">
-            <label className="dark:text-picto-primary" htmlFor="subject">
+            <label className="" htmlFor="subject">
               Subject
             </label>
             <input
@@ -171,7 +171,7 @@ const Form = () => {
               onBlur={formik.handleBlur}
               value={formik.values.subject}
               onChange={formik.handleChange}
-              className={`me-1 ${commonClass} dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-[10px] placeholder:p-1.5`}
+              className={`me-1 ${commonClass} p-2 placeholder:text-[10px] placeholder:p-1.5`}
               required
             />
           </div>
@@ -179,18 +179,20 @@ const Form = () => {
             <p className="text-red-500 text-sm mt-1">{formik.errors.subject}</p>
           )}
           <div className="">
-            <label className="dark:text-picto-primary" htmlFor="message">Message</label>
-          <textarea
-            placeholder="Your message to me . . . "
-            id="message"
-            label="Message"
-            name="message"
-            value={formik.values.message}
-            onBlur={formik.handleBlur}
-            onChange={formik.handleChange}
-            className={`${commonClass} min-h-[100px] resize-none dark:bg-[#201b2a] dark:text-white dark:rounded-md p-2 placeholder:text-[10px] placeholder:p-1.5`}
-            required
-          />
+            <label className="" htmlFor="message">
+              Message
+            </label>
+            <textarea
+              placeholder="Your message to me . . . "
+              id="message"
+              label="Message"
+              name="message"
+              value={formik.values.message}
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              className={`${commonClass} min-h-[100px] resize-none p-2 placeholder:text-[10px] placeholder:p-1.5`}
+              required
+            />
           </div>
           {formik.touched.message && formik.errors.message && (
             <p className="text-red-500 text-sm mt-1">{formik.errors.message}</p>

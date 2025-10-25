@@ -92,7 +92,7 @@ const brandLogos = [
     <img
       src={RegalEyes}
       alt="RegalEyes"
-      className="bg-transparent  dark:bg-white w-24 h-20 md:size-28 lg:w-48 lg:h-40  rounded-lg p-3"
+      className="bg-transparent w-24 h-20 md:size-28 lg:w-48 lg:h-40  rounded-lg p-3"
     />
   </Link>,
 
@@ -107,7 +107,7 @@ const brandLogos = [
     <img
       src={Gardenia}
       alt="Gardenia"
-      className="bg-transparent dark:bg-white w-24 h-20 md:size-28 lg:w-48 lg:h-40  rounded-lg p-3"
+      className="bg-transparent w-24 h-20 md:size-28 lg:w-48 lg:h-40  rounded-lg p-3"
     />
   </Link>,
 
@@ -260,7 +260,7 @@ const HappyClients = () => {
     <div className="content py-10 md:py-25 flex flex-col items-center px-2">
       <div className="max-w-144.25 text-center ">
         <p className="section-title mb-6">Happy Clients</p>
-        <p className="dark:text-gray-300 text-[14px] sm:text-lg text-soft-dark font-normal">
+        <p className="text-[14px] sm:text-lg text-soft-dark font-normal">
           I've had the pleasure of working with a diverse range of companies,
           from startups to established brands.
         </p>
