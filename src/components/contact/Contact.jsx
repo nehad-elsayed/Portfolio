@@ -1,32 +1,32 @@
-import {
-  faEnvelope,
-  faLocationDot,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+// import {
+//   faEnvelope,
+//   faLocationDot,
+//   faPhone,
+// } from "@fortawesome/free-solid-svg-icons";
 import Address from "./Address";
 import Form from "./Form";
 import SocialMedia from "../common/socialMedia/SocialMedia";
 
-const addressData = [
-  {
-    id:"1",
-    icon: faLocationDot,
-    title: "Address",
-    description: "Mansoura, 35511",
-  },
-  {
-    id:"2",
-    icon: faEnvelope,
-    title: "My Email",
-    description: "Abdelrahmanelsied7@gmail.com",
-  },
-  {
-    id:"3",
-    icon: faPhone,
-    title: "Call Me Now",
-    description: "+201028222116",
-  },
-];
+// const addressData = [
+//   {
+//     id:"1",
+//     icon: faLocationDot,
+//     title: "Address",
+//     description: "Mansoura, 35511",
+//   },
+//   {
+//     id:"2",
+//     icon: faEnvelope,
+//     title: "My Email",
+//     description: "Abdelrahmanelsied7@gmail.com",
+//   },
+//   {
+//     id:"3",
+//     icon: faPhone,
+//     title: "Call Me Now",
+//     description: "+201028222116",
+//   },
+// ];
 
 const Contact = () => {
   return (
@@ -35,7 +35,7 @@ const Contact = () => {
         className="content p-4 md:p-10 lg:p-22 bg-white rounded-2xl shadow-[0px_0px_90px_9px_rgba(0,_0,_0,_0.1)]"
         id="contact"
       >
-        <div className="flex flex-col-reverse lg:gap-5 xl:gap-25.75 lg:flex-row justify-between">
+        <div className="flex flex-col-reverse  lg:gap-5 xl:gap-25.75 lg:flex-row justify-center">
           <div>
             <div>
               <p className="text-[35px] max-lg:hidden font-semibold text-nowrap text-[#132238]">
@@ -48,9 +48,10 @@ const Contact = () => {
               </p>
             </div>
             <div className="my-8.75 sm:max-lg:flex justify-between items-center">
-              {addressData.map((item) => (
+              {/* {addressData.map((item) => (
                 <Address item={item} key={item?.id} />
-              ))}
+              ))} */}
+              <Address/>
             </div>
             <div className="w-full max-lg:text-center max-md:mb-4">
               <SocialMedia />
