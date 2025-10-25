@@ -49,6 +49,7 @@ const Address = () => {
               <a
                 href={`mailto:${item.description}`}
                 className="text-[14px] md:text-[16px] text-[#132238] font-medium hover:text-picto-primary transition-colors duration-300"
+                target="_blank"
               >
                 {item.description}
               </a>
@@ -56,6 +57,18 @@ const Address = () => {
               item.title.toLowerCase().includes("call") ? (
               <a
                 href={`tel:${item.description}`}
+                className="text-[14px] md:text-[16px] text-[#132238] font-medium hover:text-picto-primary transition-colors duration-300"
+                target="_blank"
+              >
+                {item.description}
+              </a>
+            ) : item.title.toLowerCase().includes("address") ? (
+              <a
+                href={`https://www.google.com/maps?q=${encodeURIComponent(
+                  item.description
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[14px] md:text-[16px] text-[#132238] font-medium hover:text-picto-primary transition-colors duration-300"
               >
                 {item.description}
