@@ -5,3 +5,320 @@
   padding-left: 2px;
   padding-right: 2px;
 }
+
+
+
+
+
+.animated-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  z-index: -2;
+  opacity: 0;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: transparent;
+}
+
+.animated-bg .particle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, var(--color-picto-primary), transparent 70%);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: floatParticle 3s linear infinite;
+}
+
+.animated-bg .particle:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 3s;
+}
+
+.animated-bg .particle:nth-child(2) {
+  top: 50%;
+  left: 80%;
+  animation-delay: 2s;
+  animation-duration: 4s;
+}
+
+.animated-bg .particle:nth-child(3) {
+  top: 75%;
+  left: 30%;
+  animation-delay: 4s;
+  animation-duration: 5s;
+}
+
+.animated-bg .particle:nth-child(4) {
+  top: 10%;
+  left: 60%;
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+
+.animated-bg .particle:nth-child(5) {
+  top: 40%;
+  left: 40%;
+  animation-delay: 3s;
+  animation-duration: 5s;
+}
+
+.animated-bg .particle:nth-child(6) {
+  top: 15%;
+  left: 70%;
+  animation-delay: 5s;
+  animation-duration: 3s;
+}
+
+.animated-bg .particle:nth-child(7) {
+  top: 60%;
+  left: 15%;
+  animation-delay: 1.5s;
+  animation-duration: 3s;
+}
+
+.animated-bg .particle:nth-child(8) {
+  top: 35%;
+  left: 85%;
+  animation-delay: 4.5s;
+  animation-duration: 4s;
+}
+
+.animated-bg .particle:nth-child(9) {
+  top: 80%;
+  left: 50%;
+  animation-delay: 2.5s;
+  animation-duration: 4s;
+}
+
+.animated-bg .particle:nth-child(10) {
+  top: 25%;
+  left: 25%;
+  animation-delay: 6s;
+  animation-duration: 3s;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-50px) scale(1.5);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.5;
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    opacity: 0.15;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0.15;
+  }
+}
+
+
+.animated-bg {
+  animation: none;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.animated-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: transparent;
+  animation: none;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: inset 0 0 20px rgba(255, 107, 107, 0.1);
+  }
+
+  100% {
+    box-shadow: inset 0 0 40px rgba(255, 107, 107, 0.2);
+  }
+} 
+
+
+
+/*&&&&&&&& replace */
+
+
+/* ⚡ خلفية متحركة بخطوط سريعة */
+.animated-bg {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: radial-gradient(circle at center, rgba(196, 245, 233, 0.2), transparent 70%);
+}
+
+/* ✨ الخطوط */
+.animated-bg .line {
+  position: absolute;
+  height: 2px;
+  width: 100px;
+  background: linear-gradient(90deg,
+      rgba(233, 107, 255, 0) 0%,
+      rgba(233, 107, 255, 0.8) 50%,
+      rgba(233, 107, 255, 0) 100%);
+  opacity: 0.8;
+  border-radius: 50px;
+  filter: blur(1px);
+  animation: moveLine 6s linear infinite;
+}
+
+/* ✨ بعض الخطوط بلون التركواز */
+.animated-bg .line.turquoise {
+  background: linear-gradient(90deg,
+      rgba(196, 245, 233, 0) 0%,
+      rgba(196, 245, 233, 0.8) 50%,
+      rgba(196, 245, 233, 0) 100%);
+}
+
+/* 🔁 حركة الخطوط */
+@keyframes moveLine {
+  0% {
+    transform: translateX(-150px) translateY(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(120vw) translateY(0);
+    opacity: 0;
+  }
+}
+
+/* ⚙️ إعداد مواقع وسرعات مختلفة */
+.animated-bg .line:nth-child(1) {
+  top: 10%;
+  left: -10%;
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
+
+.animated-bg .line:nth-child(2) {
+  top: 20%;
+  left: -15%;
+  animation-duration: 5.6s;
+  animation-delay: 0.5s;
+}
+
+.animated-bg .line:nth-child(3) {
+  top: 35%;
+  left: -20%;
+  animation-duration: 6.4s;
+  animation-delay: 1s;
+}
+
+.animated-bg .line:nth-child(4) {
+  top: 45%;
+  left: -25%;
+  animation-duration: 5s;
+  animation-delay: 1.3s;
+}
+
+.animated-bg .line:nth-child(5) {
+  top: 55%;
+  left: -30%;
+  animation-duration: 5.4s;
+  animation-delay: 1.6s;
+}
+
+.animated-bg .line:nth-child(6) {
+  top: 65%;
+  left: -35%;
+  animation-duration: 6s;
+  animation-delay: 1.9s;
+}
+
+.animated-bg .line:nth-child(7) {
+  top: 75%;
+  left: -40%;
+  animation-duration: 4.8s;
+  animation-delay: 2.2s;
+}
+
+.animated-bg .line:nth-child(8) {
+  top: 85%;
+  left: -45%;
+  animation-duration: 6.2s;
+  animation-delay: 2.5s;
+}
+
+.animated-bg .line:nth-child(9) {
+  top: 90%;
+  left: -50%;
+  animation-duration: 5.8s;
+  animation-delay: 2.8s;
+}
+
+.animated-bg .line:nth-child(10) {
+  top: 15%;
+  left: -55%;
+  animation-duration: 6s;
+  animation-delay: 3s;
+}
+
+/* ✨ خطوط إضافية باللون التركواز */
+.animated-bg .line:nth-child(11),
+.animated-bg .line:nth-child(12),
+.animated-bg .line:nth-child(13),
+.animated-bg .line:nth-child(14),
+.animated-bg .line:nth-child(15) {
+  background: linear-gradient(90deg,
+      rgba(196, 245, 233, 0) 0%,
+      rgba(196, 245, 233, 0.8) 50%,
+      rgba(196, 245, 233, 0) 100%);
+  height: 1.5px;
+}

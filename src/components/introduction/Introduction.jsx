@@ -26,9 +26,26 @@ const informationSummaryData = [
 const Introduction = () => {
   return (
     <div
-      className="flex max-lg:flex-col-reverse sm:justify-between pt-10 lg:pt-31.5 lg:mb-27.5 max-xl:gap-2 p-2 max-xxl:px-4"
+      className="animated-bg overflow-hidden relative flex max-lg:flex-col-reverse sm:justify-between pt-10 lg:pt-31.5 lg:mb-27.5 max-xl:gap-2 p-2 max-xxl:px-4"
       id="introduction"
     >
+      {/* <>
+        <span className="particle"></span>
+        <span className="particle"></span>
+        <span className="particle"></span>
+        <span className="particle"></span>
+        <span className="particle"></span>
+        <span className="particle"></span>
+        <span className="particle"></span>
+        <span className="particle"></span>
+        <span className="particle"></span>
+        <span className="particle"></span>
+      </> */}
+      {/* <>
+        {Array.from({ length: 15 }).map((_, i) => (
+          <span key={i} className={`line ${i > 9 ? "turquoise" : ""}`}></span>
+        ))}
+      </> */}
       <div className="w-full flex flex-col justify-between max-lg:text-center">
         <div className="pt-13 flex flex-col gap-2 me-31.5 w-full lg:w-auto transition-all duration-500">
           <p className="text-2xl text-center md:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
@@ -41,16 +58,17 @@ const Introduction = () => {
             Performance Marketer & Media Buyer
           </span>
           <p className="text-xs text-center md:text-[24px] my-6">
-            with over 2 years of consistent experience <br /> (and earlier hands-on
-            work since 2016), combining both freelance and in-agency experience.
-            Specialized in running high-converting paid campaigns across Meta,
-            TikTok, Snapchat, Google, and X for the Egyptian and Gulf markets.
-            Proficient in tracking setup (GTM, GA4, Meta social media pixels,
-            Google tracking), Conversion Rate Optimization (CRO), and
-            full-funnel strategy planning. Worked on diverse verticals including
-            online courses, food & beverage, financial services, healthcare,
-            automotive, fashion, real estate, Bus rental, and dental clinics –
-            achieving measurable performance results and business growth.
+            with over 2 years of consistent experience <br /> (and earlier
+            hands-on work since 2016), combining both freelance and in-agency
+            experience. Specialized in running high-converting paid campaigns
+            across Meta, TikTok, Snapchat, Google, and X for the Egyptian and
+            Gulf markets. Proficient in tracking setup (GTM, GA4, Meta social
+            media pixels, Google tracking), Conversion Rate Optimization (CRO),
+            and full-funnel strategy planning. Worked on diverse verticals
+            including online courses, food & beverage, financial services,
+            healthcare, automotive, fashion, real estate, Bus rental, and dental
+            clinics – achieving measurable performance results and business
+            growth.
           </p>
           <p className="text-center align-middle">
             <Link

@@ -58,7 +58,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-      <div className="px-6 relative -bottom-7 md:-bottom-10 w-fit mx-auto right-0 py-3 z-50 text-center bg-white rounded-[10px] center shadow-2xl drop-shadow-xl shadow-white">
+      <div className="px-6 relative -bottom-10 md:-bottom-10 w-fit mx-auto right-0 py-3 z-50 text-center bg-white rounded-[10px] center shadow-2xl drop-shadow-xl shadow-white">
         <SocialMedia />
       </div>
     </div>
