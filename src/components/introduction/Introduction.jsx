@@ -54,7 +54,7 @@ const Introduction = () => {
               Abdelrahman Elsayed
             </span>
           </p>
-          <span className="font-semibold text-center text-lg md:text-3xl bg-highlight  text-nowrap">
+          <span className="font-semibold text-center w-fit mx-auto mt-2 text-lg md:text-3xl bg-highlight  text-nowrap">
             Performance Marketer & Media Buyer
           </span>
           <p className="text-xs text-center md:text-[24px] my-6">
@@ -81,14 +81,14 @@ const Introduction = () => {
           </p>
         </div>
         <div className="mx-auto lg:mx-0 relative">
-          <div className="grid max-xxs:grid-flow-col grid-cols-3 w-fit mt-10 gap-1">
+          <div className="grid mx-auto grid-cols-3 w-fit mt-10 gap-1">
             {informationSummaryData.map((item) => (
               <InformationSummary key={item.id} item={item} />
             ))}
           </div>
         </div>
       </div>
-      <div
+      {/* <div
         className={`max-w-134 w-full h-full max-lg:mx-auto aspect-[536/636] relative`}
       >
         <img
@@ -96,7 +96,7 @@ const Introduction = () => {
           src={person}
           alt="person"
         />
-      </div>
+      </div> */}
     </div>
   );
 };
