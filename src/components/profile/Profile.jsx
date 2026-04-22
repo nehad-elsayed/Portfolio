@@ -40,14 +40,14 @@ const Profile = () => {
             </p>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <ScrollLink
+            {/* <ScrollLink
               className=" text-white hover:bg-white duration-300 transition-all hover:text-picto-primary btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 bg-picto-primary border-picto-primary text-xs xxs:text-[14px] sm:text-[16px]"
               to="portfolio"
               smooth={true}
               duration={1000}
             >
               My Projects
-            </ScrollLink>
+            </ScrollLink> */}
             <Link
               className={`btn xxs:btn-lg px-6 border-picto-primary max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white hover:bg-picto-primary hover:text-white duration-300 transition-all text-picto-primary  ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
               to={`${CV_URL}`}
