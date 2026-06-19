@@ -7,7 +7,7 @@ const navItems = [
   { id: 2, name: "About", url: "profile" },
   { id: 3, name: "Process", url: "work-process" },
   // { id: 4, name: "Portfolio", url: "portfolio" },
-  // { id: 5, name: "Blog", url: "blog" },
+  { id: 5, name: "Blog", url: "blog" },
   { id: 6, name: "Services", url: "services" },
 ];
 
@@ -27,7 +27,7 @@ const menu = navItems.map((item) => (
       spy={true}
       offset={-140}
       activeStyle={{
-        backgroundColor: "#9929fb",
+        backgroundColor: "#02bca9",
         color: "white",
       }}
       className={`hover:text-picto-primary px-5 py-3 mx-1`}
@@ -103,7 +103,7 @@ const NavBar = () => {
           <ul className="hidden lg:flex menu menu-horizontal text-base md:text-[20px] font-medium md:shrink-0">
             {menu}
           </ul>
-          <p className="">
+          <div >
             <Link
               className="btn btn-sm xs:btn-md sm:btn-lg btn-primary"
               href="#contact"
@@ -113,7 +113,7 @@ const NavBar = () => {
             >
               Contact
             </Link>
-          </p>
+          </div>
         </div>
       </div>
     </div>

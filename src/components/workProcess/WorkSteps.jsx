@@ -13,7 +13,7 @@ const WorkSteps = ({ data, style }) => {
     >
       <div
         className={`w-11 h-11 sm:w-18 sm:h-18 ${
-          hover ? "bg-[#d8b5f980]" : "bg-[#EDD8FF80]"
+          hover ? "bg-[#7cf0e464]  border-2 border-picto-primary" : "bg-[#fff] border-2 border-picto-primary "
         } text-center center rounded-md`}
       >
         <div className="max-sm:p-2 sm:w-8 sm:h-8">

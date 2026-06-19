@@ -3,6 +3,7 @@ import Research from "../../assets/icons/Research.svg";
 import Strategy from "../../assets/icons/Planning.svg";
 import Execution from "../../assets/icons/Execution.svg";
 import Optimization from "../../assets/icons/Optimization.svg";
+
 const workStepData = [
   {
     id: 1,
