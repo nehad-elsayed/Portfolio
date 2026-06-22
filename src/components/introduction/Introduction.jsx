@@ -28,11 +28,11 @@ const informationSummaryData = [
 const Introduction = () => {
   return (
     <div
-      className="animated-bg overflow-hidden relative flex max-lg:flex-col-reverse sm:justify-between pt-10 lg:pt-31.5 lg:mb-27.5 max-xl:gap-2 p-2 max-xxl:px-4"
+      className="animated-bg overflow-hidden relative flex flex-col pt-10 lg:pt-31.5 lg:mb-27.5 p-2 max-xxl:px-4"
       id="introduction"
     >
-      <div className="w-full flex flex-col justify-between max-lg:text-center">
-        <div className="pt-13 flex flex-col gap-2 me-31.5 w-full lg:w-auto transition-all duration-500">
+      <div className="w-full max-w-3xl mx-auto flex flex-col justify-between text-center">
+        <div className="pt-13 flex flex-col gap-2 w-full transition-all duration-500">
           <p className="text-2xl text-center md:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
             Hello, I’m
             <span className="md:text-nowrap text-lg md:text-[32px] shrink-0 inline-block w-full">
@@ -67,46 +67,31 @@ const Introduction = () => {
             </ul>
           </div>
           <p className="text-center align-middle">
-            {/* <Link
-              to={`https://wa.me/${phoneNumber}?text=Hello Can i schedule a free audit consultation?`}
-              
-              className="mt-5 md:mt-12.5 btn btn-primary text-white w-fit md:py-3 md:px-6 text-[12px] sm:text-[16px] font-semibold max-md:mx-auto max-md:mb-5"
+            <ScrollLink
+              to="blog"
+              smooth={true}
+              duration={1000}
+              className="btn mt-3 btn-primary px-4 md:px-6.5 py-3 md:py-6 text-[12px] md:text-[16px]"
             >
-              View Case Studies
-            </Link> */}
-                 <ScrollLink
-                      to="blog"
-                      smooth={true}
-                      duration={1000}
-                      className="btn btn-primary px-4 md:px-6.5 py-3 md:py-6 text-[12px] md:text-[16px]"
-                    >
-                     view case studies
-                      <FontAwesomeIcon
-                        icon={faArrowRight}
-                        size="l"
-                        style={{ color: "#FFFFFF" }}
-                        className="ms-3"
-                      />
-                    </ScrollLink>
+              view case studies
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                size="l"
+                style={{ color: "#FFFFFF" }}
+                className="ms-3"
+              />
+            </ScrollLink>
           </p>
         </div>
-        <div className="mx-auto lg:mx-0 relative">
-          <div className="grid mx-auto grid-cols-3 w-fit mt-10 gap-1">
+
+        <div className="flex justify-center  mt-10">
+          <div className="grid grid-cols-3 gap-1 w-fit">
             {informationSummaryData.map((item) => (
               <InformationSummary key={item.id} item={item} />
             ))}
           </div>
         </div>
       </div>
-      {/* <div
-        className={`max-w-134 w-full h-full max-lg:mx-auto aspect-[536/636] relative`}
-      >
-        <img
-          className={`shadow-2xl shadow-gray-200 w-full h-full absolute bottom-0 object-cover bg-white rounded-3xl`}
-          src={person}
-          alt="person"
-        />
-      </div> */}
     </div>
   );
 };
