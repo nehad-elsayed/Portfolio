@@ -11,6 +11,7 @@ const WorkSteps = ({ data, style }) => {
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
     >
+      
       <div
         className={`w-11 h-11 sm:w-18 sm:h-18 ${
           hover ? "bg-[#7cf0e464]  border-2 border-picto-primary" : "bg-[#fff] border-2 border-picto-primary "

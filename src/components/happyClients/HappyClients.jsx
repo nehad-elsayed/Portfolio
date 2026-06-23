@@ -16,12 +16,36 @@ import Gardenia from "../../assets/icons/Gardenia.ico";
 import Raeel from "../../assets/icons/Raeel.ico";
 import OB from "../../assets/icons/OB.ico";
 import { Link } from "react-router-dom";
+import ishraq from "../../assets/icons/ishraqmed.ico";
+import scene from "../../assets/icons/Scene.ico";
+import LiT from "../../assets/icons/LiT.ico";
 const brandLogos = [
   <Link to="https://chamber.sa/Pages/default.aspx" target="_blank">
     <img
       src={RyadRoom}
       alt="RyadRoom"
       className="bg-black/90 size-16 md:size-20 lg:w-48 lg:h-40 rounded-lg p-3"
+    />
+  </Link>,
+  <Link to="#">
+    <img
+      src={ishraq}
+      alt="ishraqmed_logo"
+      className="size-16 md:size-20 lg:w-48 lg:h-40 rounded-lg p-3"
+    />
+  </Link>,
+  <Link to="#">
+    <img
+      src={scene}
+      alt="scene_logo"
+      className="size-16 md:size-20 lg:w-48 lg:h-40 rounded-lg p-3"
+    />
+  </Link>,
+  <Link to="#">
+    <img
+      src={LiT}
+      alt="LiT_logo"
+      className="size-16 md:size-20 lg:w-48 lg:h-40 rounded-lg p-3"
     />
   </Link>,
   <Link to="https://tjhiz.com/" target="_blank">
@@ -259,10 +283,13 @@ const HappyClients = () => {
   return (
     <div className="content py-10 md:py-25 flex flex-col items-center px-2">
       <div className="max-w-144.25 text-center ">
-        <p className="section-title mb-6">Happy Clients</p>
-        <p className="text-[14px] sm:text-lg text-soft-dark font-normal">
-          I've had the pleasure of working with a diverse range of companies,
-          from startups to established brands.
+        <p className="section-title mb-6 text-sm md:text-base md:text-nowrap">
+          Brands I've Worked With
+        </p>
+        <p className="text-sm md:text-xl text-soft-dark font-normal">
+          Worked with businesses across Saudi Arabia, Egypt, and the GCC in
+          industries including healthcare, architecture, construction, real
+          estate, e-commerce, and education.
         </p>
       </div>
       <Marquee pauseOnHover={true} direction="right" speed={100} className="">
@@ -279,6 +306,3 @@ const HappyClients = () => {
 };
 
 export default HappyClients;
-
-
-

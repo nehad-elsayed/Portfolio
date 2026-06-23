@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link as ScrollLink } from "react-scroll";
 
 // Information summary data
-const phoneNumber = "+201097476242";
+// const phoneNumber = "+201097476242";
 const informationSummaryData = [
   {
     id: 1,

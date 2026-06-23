@@ -13,41 +13,21 @@ const Profile = () => {
       id="profile"
     >
       <div className="flex flex-col justify-between items-center gap-6">
-        {/* Profile image */}
-        <div className="xxl:max-w-106 w-auto h-auto xxl:max-h-126">
-          {/* <div className="max-w-106 h-117 object-fill overflow-hidden rounded-xl">
-            <img
-              className="bg-soft-white h-[120%] object-cover"
-              src={person}
-              alt=""
-            />
-          </div> */}
-          {/* Social media section */}
-        </div>
+        <div className="xxl:max-w-106 w-auto h-auto xxl:max-h-126"></div>
 
         <div className="">
           <h2 className="text-sm text-center lg:text-[30px] text-[min(24px,38px)] max-md:text-center font-semibold mb-8">
-            I am Professional Performance Marketer & Media Buyer
+            I Scale E-commerce Brands & Lead Generation Businesses Through
+            Data-Driven Performance Marketing
           </h2>
           <div className="text-base md:text-[20px] lg:text-[24px] font-normal text-center text-gray-600">
             <p className="text-center w-full">
-              I plan, execute, and optimize campaigns for businesses,
-              specializing in creating data-driven strategies that drive
-              measurable growth and ROI. My passion is helping brands scale
-              through smart advertising and precision targeting. I focus on
-              delivering high-performing campaigns across digital platforms,
-              ensuring every ad spend generates maximum impact.
+              Performance Marketer with 2.5+ years of agency and freelance
+              experience Since 2016, managing campaigns across Meta, Google,
+              TikTok, Snapchat, and X for Egyptian and GCC markets.
             </p>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            {/* <ScrollLink
-              className=" text-white hover:bg-white duration-300 transition-all hover:text-picto-primary btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 bg-picto-primary border-picto-primary text-xs xxs:text-[14px] sm:text-[16px]"
-              to="portfolio"
-              smooth={true}
-              duration={1000}
-            >
-              My Projects
-            </ScrollLink> */}
             <Link
               className={`btn xxs:btn-lg px-6 border-picto-primary max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white hover:bg-picto-primary hover:text-white duration-300 transition-all text-picto-primary  ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
               to={`${CV_URL}`}

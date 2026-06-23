@@ -11,18 +11,22 @@ const rolesData = [
   },
   {
     id: 2,
+    title: "Creative Strategy & Ad Concepts",
+    description:"I develop data-driven creative strategies, ad angles, and winning concepts based on audience psychology, competitor analysis, and performance insights to improve campaign results."  },
+  {
+    id: 3,
     title: "Performance Strategy & Media Planning",
     description:
       "I create tailored strategies and media plans that align with your business goals, budgets, and KPIs to ensure maximum impact.",
   },
   {
-    id: 3,
+    id: 4,
     title: "Tracking & Analytics",
     description:
       "From setting up pixels and server tracking to analyzing campaign data, I ensure accurate tracking and provide actionable insights to improve performance.",
   },
   {
-    id: 4,
+    id: 5,
     title: "Conversion Rate Optimization (CRO)",
     description:
       "I optimize landing pages, ad creatives, and user journeys to improve conversion rates and reduce customer acquisition costs.",

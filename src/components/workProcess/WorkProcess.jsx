@@ -40,32 +40,22 @@ const workStepData = [
 const WorkProcess = () => {
   return (
     <div
-      className="content grid lg:grid-cols-2 lg:items-center px-2 py-5 md:py-10 lg:py-25 xl:py-35 max-xxl:px-4"
+      className="content grid lg:grid-cols-1 lg:items-center px-2 py-5 md:py-10 lg:py-25 xl:py-35 max-xxl:px-4"
       id="work-process"
     >
-      <div className="lg:pe-10 xl:pe-35.75 max-xs:mb-3 max-xl:mb-8">
-        <p className="section-title max-xl:text-center">Work Process</p>
-        <p className="mt-6 mb-4 md:text-[18px] text-sm font-normal max-xl:text-center text-gray-500">
-          Driven by data and powered by strategy, I create performance marketing
-          campaigns that deliver measurable business growth. From market
-          research to campaign optimization, every step is built on insights and
-          testing — merging creativity with performance.
-        </p>
-        <p className="mt-6 md:text-[18px] text-sm font-normal max-xl:text-center text-gray-500">
-          I combine data-driven decision making with continuous optimization to
-          build high-performing campaigns that maximize ROI and create scalable,
-          sustainable results.
-        </p>
-      </div>
+      <h4 className="section-title text-center my-5 max-xl:text-center">
+        Work Process
+      </h4>
 
-      <div className="grid xs:grid-cols-2 justify-end my-2 w-fit mx-auto ">
+      <div className="grid grid-cols-1 md:grid-cols-2 justify-end my-2 w-fit mx-auto">
         {workStepData.map((data) => {
           return (
             <WorkSteps
               data={data}
-              style={`max-xs:mt-3 p-4 sm:p-8 bg-white aspect-auto sm:max-w-78 ${
-                data?.id % 2 == 0 ? "xs:ms-3 xs:mt-6 " : "xs:mb-6"
+              style={`mt-3 p-4 sm:p-8 bg-white aspect-auto sm:max-w-78 ${
+                data?.id % 2 == 0 ? "md:ms-3 md:mt-6 " : "xs:mb-6"
               }`}
+              // style={`mt-3 p-4 sm:p-8 bg-white aspect-auto sm:max-w-78 md:ms-2`}
               key={data?.id}
             />
           );

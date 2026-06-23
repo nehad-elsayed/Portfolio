@@ -11,8 +11,8 @@ import Contact from "../components/contact/Contact";
 
 const Home = () => {
   return (
-    <div className="relative">
-      <div className="introduction-profile-background">
+    <div className="relative ">
+      <div className="introduction-profile-background flex flex-wrap justify-center items-center">
         <div className="content">
           <Introduction />
           <Profile />
