@@ -4,7 +4,7 @@ const MonoBlog = ({ data }) => {
       <a href={data?.link}>
         <img
           src={data?.image}
-          alt="Blog"
+          alt="Case study"
           className="w-full h-56.5 object-cover "
         />
         <div className="m-6">
