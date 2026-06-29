@@ -1,7 +1,4 @@
-// import img1 from "../../assets/images/blog/blog-1.jpg";
-// import img2 from "../../assets/images/blog/blog-2.jpg";
-// import img3 from "../../assets/images/blog/blog-3.jpg";
-// import img4 from "../../assets/images/blog/blog-4.jpg";
+import case1 from "../../assets/images/person.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import MonoBlog from "./MonoBlog";
@@ -28,7 +25,7 @@ const custom_breakpoints = {
 const blogData = [
   {
     id: 1,
-    // image: img1,
+    image: case1,
     date: "22 Oct, 2020",
     comments: 246,
     title: "Designing Engaging User Interfaces for Modern Web Apps",
@@ -36,7 +33,7 @@ const blogData = [
   },
   {
     id: 2,
-    // image: img2,
+    image: case1,
     date: "22 Oct, 2020",
     comments: 246,
     title: "Tips for Effective Dashboard Layouts and Usability",
@@ -44,7 +41,7 @@ const blogData = [
   },
   {
     id: 3,
-    // image: img3,
+    image: case1,
     date: "22 Oct, 2020",
     comments: 246,
     title: "How to Visualize Data for Better Product Decisions",
@@ -52,7 +49,7 @@ const blogData = [
   },
   {
     id: 4,
-    // image: img4,
+    image: case1,
     date: "22 Oct, 2020",
     comments: 246,
     title: "Responsive Design: Adapting to All Devices Seamlessly",
@@ -60,7 +57,7 @@ const blogData = [
   },
   {
     id: 5,
-    // image: img2,
+    image: case1,
     date: "22 Oct, 2020",
     comments: 246,
     title: "Streamlining Workflows with UI/UX Best Practices",
@@ -68,10 +65,18 @@ const blogData = [
   },
   {
     id: 6,
-    // image: img1,
+    image: case1,
     date: "22 Oct, 2020",
     comments: 246,
-    title: "Optimizing Interface Components for Performance",
+    title: "Streamlining Workflows with UI/UX Best Practices",
+    link: "#!",
+  },
+  {
+    id: 7,
+    image: case1,
+    date: "22 Oct, 2020",
+    comments: 246,
+    title: "Streamlining Workflows with UI/UX Best Practices",
     link: "#!",
   },
 ];
@@ -82,8 +87,8 @@ const Blog = () => {
       <div className="max-w-135 text-center mx-auto pb-17.5">
         <p className="section-title pb-6">Case Studies</p>
         <p className="text-xs xs:text-[16px] md:text-lg text-gray-400">
-          Check out my recent case studies posts where I share insights on design,
-          development, and the latest industry trends.
+          Check out my recent case studies posts where I share insights on
+          design, development, and the latest industry trends.
         </p>
       </div>
       <Swiper

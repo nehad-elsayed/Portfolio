@@ -33,9 +33,12 @@ const Form = () => {
     subject: Yup.string().required("Subject is required"),
     message: Yup.string().required("Message is required"),
   });
-  const onSubmit = async (values) => {
+
+  const onSubmit = async (values, { setSubmitting }) => {
     try {
-      // Sending email using EmailJS
+      console.log("Submitting form with values:", values);
+
+      // Sending email using EmailJS (v4 syntax: publicKey must be passed as an object)
       const result = await emailjs.send(
         "service_o46wj0l", // Service ID
         "template_5mp2r3b", // Template ID
@@ -48,8 +51,10 @@ const Form = () => {
           subject: values.subject,
           message: values.message,
         },
-        "LA1NIQehj9bp5XUMk"
-      ); // Public Key
+        {
+          publicKey: "LA1NIQehj9bp5XUMk", // Public Key (must be inside an object in v4)
+        }
+      );
 
       console.log("Email sent successfully:", result);
       toast.success("Message sent successfully! I will contact you soon.");
@@ -57,9 +62,14 @@ const Form = () => {
       // Reset the form
       formik.resetForm();
     } catch (error) {
+      // Log the real error so you can see exactly what EmailJS is complaining about
+      console.error("EmailJS error:", error);
       toast.error("Error sending email. Please Try Again");
+    } finally {
+      setSubmitting(false);
     }
   };
+
   const formik = useFormik({
     initialValues,
     validationSchema,
@@ -199,9 +209,10 @@ const Form = () => {
           )}
           <button
             type="submit"
-            className="btn gap-3 max-lg:mx-auto btn-primary rounded-sm mt-5 text-[13px] md:text-[16px] w-fit font-semibold lg:mt-12.5 p-4 "
+            disabled={formik.isSubmitting}
+            className="btn gap-3 max-lg:mx-auto btn-primary rounded-sm mt-5 text-[13px] md:text-[16px] w-fit font-semibold lg:mt-12.5 p-4 disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Send
+            {formik.isSubmitting ? "Sending..." : "Send"}
           </button>
         </form>
       </div>
